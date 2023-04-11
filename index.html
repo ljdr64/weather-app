@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <!--
+      Snowpack will replace / with the value you have for `baseUrl` in `snowpack.config.js`.
+      Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
+
+      More about config options:
+      - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
+    -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/_dist_/index.css"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!--
+      This HTML file is a template.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+
+      Start modyfing from here.
+    -->
+    <div class="py-10 max-w-screen-2xl min-w-min mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p
+          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        >
+          PLATZI
+        </p>
+        <h3
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        >
+          Weather APP
+        </h3>
+
+        <div class="p-4"></div>
+
+        <div class="container flex justify-center flex-wrap">
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-london"></h1>
+            <div class="main-temp-london"></div>
+            <div class="card-img-london w-full"></div>
+            <div class="main-temp-max-london"></div>
+            <div class="main-temp-min-london"></div>
+            <div class="description-london"></div>
+          </div>
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-paris"></h1>
+            <div class="main-temp-paris"></div>
+            <div class="card-img-paris w-full"></div>
+            <div class="main-temp-max-paris"></div>
+            <div class="main-temp-min-paris"></div>
+            <div class="description-paris"></div>
+          </div>
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-tokio"></h1>
+            <div class="main-temp-tokio"></div>
+            <div class="card-img-tokio w-full"></div>
+            <div class="main-temp-max-tokio"></div>
+            <div class="main-temp-min-tokio"></div>
+            <div class="description-tokio"></div>
+          </div>     
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more scripts here -->
+    <script type="module" src="/_dist_/index.js"></script>
+  </body>
+</html>
