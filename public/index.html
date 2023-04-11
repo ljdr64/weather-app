@@ -20,7 +20,7 @@
       type="text/css"
       href="%PUBLIC_URL%/_dist_/index.css"
     />
-    <title>Snowpack & Tailwind App</title>
+    <title>Weather App</title>
   </head>
   <body>
     <!--
@@ -31,53 +31,47 @@
 
       Start modyfing from here.
     -->
-    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="py-10 max-w-screen-2xl min-w-min mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
         <p
           class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
         >
-          Snowpack
+          PLATZI
         </p>
         <h3
           class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
         >
-          Tailwind template
+          Weather APP
         </h3>
-        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-          Use this template to build awesome websites using Snowpack and
-          Tailwind. It also includes Prettier and automatic publish to GitHub
-          pages using GitHub Actions. Learn more:
-        </p>
-        <ul
-          class="text-xl leading-7 sm:flex justify-around sm:max-w-2xl sm:mx-auto mt-10"
-        >
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://snowpack.dev" target="_blank">snowpack.dev</a>
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a href="https://tailwindcss.com" target="_blank"
-              >tailwindcss.com</a
-            >
-          </li>
-          <li class="my-4 p-4 px-6 bg-gray-300 hover:bg-gray-500">
-            <a
-              href="https://docs.github.com/en/free-pro-team@latest/actions"
-              target="_blank"
-              >GitHub Actions</a
-            >
-          </li>
-        </ul>
-        <p class="mt-14 text-xl leading-7 text-gray-500">Start using it:</p>
-        <div class="my-5 bg-gray-800 p-5 text-white">
-          <code>
-            npx create-snowpack-app my-app --template snowpack-template-tailwind
-          </code>
+
+        <div class="p-4"></div>
+
+        <div class="container flex justify-center flex-wrap">
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-london"></h1>
+            <div class="main-temp-london"></div>
+            <div class="card-img-london w-full"></div>
+            <div class="main-temp-max-london"></div>
+            <div class="main-temp-min-london"></div>
+            <div class="description-london"></div>
+          </div>
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-paris"></h1>
+            <div class="main-temp-paris"></div>
+            <div class="card-img-paris w-full"></div>
+            <div class="main-temp-max-paris"></div>
+            <div class="main-temp-min-paris"></div>
+            <div class="description-paris"></div>
+          </div>
+          <div class="pt-1 pb-1 cards bg-blue-500 w-40 m-2.5 rounded-2xl">
+            <h1 class="city-name-tokio"></h1>
+            <div class="main-temp-tokio"></div>
+            <div class="card-img-tokio w-full"></div>
+            <div class="main-temp-max-tokio"></div>
+            <div class="main-temp-min-tokio"></div>
+            <div class="description-tokio"></div>
+          </div>     
         </div>
-        <p class="mt-16 text-xl leading-7 text-gray-500 underline">
-          <a href="https://github.com/jonalvarezz/snowpack-template-tailwind"
-            >See on GitHub</a
-          >
-        </p>
       </div>
     </div>
 
