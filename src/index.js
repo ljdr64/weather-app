@@ -23,21 +23,21 @@ window
     const cityNameL1 = cityName1.toLowerCase()
 
     const cityName = document.querySelector(`.city-name-${cityNameL1}`);
-    cityName.textContent = cityName1 + ' - ' + responseJson.sys.country;
+    cityName.textContent = cityName1 + ', ' + responseJson.sys.country;
 
     const mainTemp = document.querySelector(`.main-temp-${cityNameL1}`);
-    mainTemp.textContent = converseKelvinCelsius(responseJson.main.temp) + ' C°';
+    mainTemp.textContent = converseKelvinCelsius(responseJson.main.temp) + '°';
 
     const cardImage = document.querySelector(`.card-img-${cityNameL1}`);
     const img = document.createElement('img');
     img.src = urlIcon + responseJson.weather[0].icon + urlIconExt;
-    cardImage.appendChild(img); 
+    cardImage.appendChild(img);
     
     const mainTempMax = document.querySelector(`.main-temp-max-${cityNameL1}`);
-    mainTempMax.textContent = 'Max: ' + converseKelvinCelsius(responseJson.main.temp_max) + ' C°';
+    mainTempMax.textContent = 'Max: ' + converseKelvinCelsius(responseJson.main.temp_max) + '°';
     
     const mainTempMin = document.querySelector(`.main-temp-min-${cityNameL1}`);
-    mainTempMin.textContent = 'Min: ' + converseKelvinCelsius(responseJson.main.temp_min) + ' C°';
+    mainTempMin.textContent = 'Min: ' + converseKelvinCelsius(responseJson.main.temp_min) + '°';
 
     const description = document.querySelector(`.description-${cityNameL1}`);
     description.textContent = responseJson.weather[0].description.toUpperCase();
