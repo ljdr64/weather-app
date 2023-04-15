@@ -46,14 +46,15 @@
 
         <div class="p-2"></div>
 
-        <form class="flex m-2 justify-center flex-wrap" role="search">
-          <input class="m-1 form-control px-4 py-2 rounded-md" type="search" placeholder="Search" aria-label="Search">
-          <button type="submit" class="m-1 text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-md">Search</button>
+        <form class="flex m-2 justify-center flex-wrap" id="form-search" method="POST">
+          <input class="form-control m-1 px-4 py-2 rounded-md border-2 border-black invalid:border-red-500" name="city" type="text" placeholder="Search" aria-label="Search"
+          id="input-search">
+          <button type="submit" class="m-1 text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-md" id="btn-search">Search</button>
         </form>
 
         <div class="p-2"></div>
-
-        <div class="container flex justify-center flex-wrap">
+                
+        <div class="container flex justify-center flex-wrap" id="app">
           <div class="text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5
            border-2 border-black rounded-2xl">
             <h1 class="bg-gray-300 bg-white rounded-md city-name-london"></h1>
