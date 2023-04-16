@@ -50,13 +50,15 @@
           <input class="form-control m-1 px-4 py-2 rounded-md border-2 border-black invalid:border-red-500" name="city" type="text" placeholder="Search" aria-label="Search"
           id="input-search">
           <button type="submit" class="m-1 text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-md" id="btn-search">Search</button>
+          <button type="reset" class="m-1 text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md" id="btn-clear">Clear</button>
+          <button type="button" class="m-1 text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md" id="btn-reset">Reset</button>
         </form>
 
         <div class="p-2"></div>
                 
         <div class="container flex justify-center flex-wrap" id="app">
           <div class="text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5
-           border-2 border-black rounded-2xl">
+           border-2 border-black rounded-2xl" id="count-3">
             <h1 class="bg-gray-300 bg-white rounded-md city-name-london"></h1>
             <div class="pt-4 text-5xl main-temp-london"></div>
             <div class="card-img-london w-full"></div>
@@ -65,7 +67,7 @@
             <div class="description-london"></div>
           </div>
           <div class="text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5
-           border-2 border-black rounded-2xl">
+           border-2 border-black rounded-2xl" id="count-2">
             <h1 class="bg-gray-300 rounded-md city-name-paris"></h1>
             <div class="pt-4 text-5xl main-temp-paris"></div>
             <div class="card-img-paris w-full"></div>
@@ -74,7 +76,7 @@
             <div class="description-paris"></div>
           </div>
           <div class="text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5
-           border-2 border-black rounded-2xl">
+           border-2 border-black rounded-2xl" id="count-1">
             <h1 class="bg-gray-300 bg-white rounded-md city-name-tokio"></h1>
             <div class="pt-4 text-5xl main-temp-tokio"></div>
             <div class="card-img-tokio w-full"></div>
