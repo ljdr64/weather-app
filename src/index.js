@@ -53,6 +53,10 @@ window
 
 cities.map((city) => { return weatherCity(city) });
 
+const formSearch = document.getElementById('form-search');
+const resetSearch = document.getElementById('btn-reset');
+let count = 4;
+
 let accionSearchCity = (event) => {
     // <div class="text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5
     //        border-2 border-black rounded-2xl">
@@ -65,45 +69,59 @@ let accionSearchCity = (event) => {
     // </div>
 
     event.preventDefault();
-
-    let searchedCityName = document.getElementById('input-search').value.toLowerCase().split(' ').join('-');
-
-        const h1 = document.createElement('h1');
-        h1.className = `bg-gray-300 bg-white rounded-md city-name-${searchedCityName}`;
-
-        const div1 = document.createElement('div');
-        div1.className = `pt-4 text-5xl main-temp-${searchedCityName}`;
-        
-        const div2 = document.createElement('div');
-        div2.className = `card-img-${searchedCityName} w-full`;
-
-        const div3 = document.createElement('div');
-        div3.className = `text-xl main-temp-max-${searchedCityName}`;        
-
-        const div4 = document.createElement('div');
-        div4.className = `text-xl main-temp-min-${searchedCityName}`;
-
-        const div5 = document.createElement('div');
-        div5.className = `description-${searchedCityName}`;
-
-        const container = document.createElement('div');
-        container.append(h1, div1, div2, div3, div4, div5);
-        container.className = 'text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5 border-2 border-black rounded-2xl';
     
-    searchedCityName = searchedCityName[0].toUpperCase() + searchedCityName.slice(1).toLowerCase().split('-').join(' ');
+    const inputSearch = document.getElementById('input-search');
 
-    fetch( url(searchedCityName) )
-        .then(response => {
-           if(response.status == 200) {            
-            appNode.insertAdjacentHTML("afterbegin", container.outerHTML);
-            weatherCity(searchedCityName);
-            } else {
-                throw ('error')
-            }
-        })
-        .catch((err) => alert(err));    
+    if(inputSearch.value !== ''){
+
+        let searchedCityName = inputSearch.value.toLowerCase().split(' ').join('-');
+        formSearch.reset();
+
+            const h1 = document.createElement('h1');
+            h1.className = `bg-gray-300 bg-white rounded-md city-name-${searchedCityName}`;
+
+            const div1 = document.createElement('div');
+            div1.className = `pt-4 text-5xl main-temp-${searchedCityName}`;
+
+            const div2 = document.createElement('div');
+            div2.className = `card-img-${searchedCityName} w-full`;
+
+            const div3 = document.createElement('div');
+            div3.className = `text-xl main-temp-max-${searchedCityName}`;        
+
+            const div4 = document.createElement('div');
+            div4.className = `text-xl main-temp-min-${searchedCityName}`;
+
+            const div5 = document.createElement('div');
+            div5.className = `description-${searchedCityName}`;
+
+            const container = document.createElement('div');
+            container.append(h1, div1, div2, div3, div4, div5);
+            container.className = 'text-lg font-serif p-4 cards bg-blue-500 w-52 m-2.5 border-2 border-black rounded-2xl';
+            container.id = `count-${count}`
+        
+        searchedCityName = searchedCityName[0].toUpperCase() + searchedCityName.slice(1).toLowerCase().split('-').join(' ');
+
+        fetch( url(searchedCityName) )
+            .then(response => {
+               if(response.status == 200) { 
+
+                appNode.insertAdjacentHTML("afterbegin", container.outerHTML);
+                weatherCity(searchedCityName);
+                count ++ ;
+                
+                if(count > 6) {                   
+                    document.getElementById(`count-${count - 6}`).remove();
+                }
+
+                } else {
+                    throw ('LA CIUDAD NO ES VÁLIDA')
+                }
+            })
+            .catch((err) => alert(err));
+    }
 }
 
-let formSearch = document.getElementById('form-search');
-
-formSearch.addEventListener('submit', accionSearchCity);
+    formSearch.addEventListener('submit', accionSearchCity);
+    resetSearch.addEventListener('click', () => window.location.reload());
+    
