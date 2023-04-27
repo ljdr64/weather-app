@@ -2,7 +2,7 @@
 
 Aplicación del clima actual de ciudades del mundo con un buscador incluido. Proyecto del Curso de Manipulación del DOM de Platzi.
 
-![Weather App](https://user-images.githubusercontent.com/77581853/232289514-11e574b2-2041-4c80-b314-d6766593ed79.jpg)
+![Weather-App](https://user-images.githubusercontent.com/77581853/234727149-8794a8ef-37cd-4210-8a9c-6418451c27a8.jpg)
 
 ## Available Scripts
 
